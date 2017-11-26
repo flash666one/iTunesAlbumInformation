@@ -10,6 +10,8 @@ import UIKit
 
 class SongTableViewCell: UITableViewCell {
     
+    //клас ячейки с песней
+    
     @IBOutlet weak var songNumber: UILabel!
     
     @IBOutlet weak var songInfo: UILabel!

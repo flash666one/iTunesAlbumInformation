@@ -20,8 +20,8 @@ class AlbumViewController: UIViewController {
         super.viewDidLoad()
         albumCollectionView.delegate = self
         albumCollectionView.dataSource = self
-        AlbumParse.main.asd = (object?.artistId)!
-        AlbumParse.main.getAlbum { (albums) in
+        //вызываю функцию парсинга альбомов
+        RequestManager.main.getAlbum(by: object!.artistId) { (albums) in
             self.albums = albums
             self.albumCollectionView.reloadData()
         }
@@ -36,9 +36,8 @@ extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = albumCollectionView.dequeueReusableCell(withReuseIdentifier: "album", for: indexPath) as! AlbumCollectionViewCell
-        
+        //извлекаю по url дату изображения и передаю на imageview ячейки
         let artwork = albums[indexPath.row].artwork
-        
         if let url = URL(string: artwork) {
             let dataTask = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
                 if let imageData = data {

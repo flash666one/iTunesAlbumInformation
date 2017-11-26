@@ -11,9 +11,7 @@
 		AC103AA31FC8786600D3B48E /* AlbumTracklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC103AA21FC8786600D3B48E /* AlbumTracklist.swift */; };
 		AC17059E1FC766B30059A54E /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17059D1FC766B30059A54E /* SongTableViewCell.swift */; };
 		AC1705A01FC769560059A54E /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17059F1FC769560059A54E /* Artist.swift */; };
-		AC1705A21FC7D8DF0059A54E /* AlbumParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1705A11FC7D8DF0059A54E /* AlbumParse.swift */; };
 		AC1705A41FC7D9E10059A54E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1705A31FC7D9E10059A54E /* Album.swift */; };
-		AC1705A61FC7E4FD0059A54E /* AlbumTracklistParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1705A51FC7E4FD0059A54E /* AlbumTracklistParse.swift */; };
 		AC1705A81FC7E6640059A54E /* Tracklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1705A71FC7E6640059A54E /* Tracklist.swift */; };
 		AC1D652E1FC7017000EF9E15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1D652D1FC7017000EF9E15 /* AppDelegate.swift */; };
 		AC1D65301FC7017000EF9E15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1D652F1FC7017000EF9E15 /* ViewController.swift */; };
@@ -22,8 +20,8 @@
 		AC1D65381FC7017000EF9E15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1D65361FC7017000EF9E15 /* LaunchScreen.storyboard */; };
 		AC1D65401FC7025E00EF9E15 /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1D653F1FC7025E00EF9E15 /* ArtistTableViewCell.swift */; };
 		AC1D65421FC705EC00EF9E15 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1D65411FC705EC00EF9E15 /* AlbumViewController.swift */; };
-		AC1D65461FC70AB600EF9E15 /* ArtistParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1D65451FC70AB600EF9E15 /* ArtistParse.swift */; };
 		AC1D65481FC70DB000EF9E15 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1D65471FC70DB000EF9E15 /* AlbumCollectionViewCell.swift */; };
+		AC7A27201FCB177C0054BB29 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7A271F1FCB177C0054BB29 /* RequestManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +29,7 @@
 		AC103AA21FC8786600D3B48E /* AlbumTracklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTracklist.swift; sourceTree = "<group>"; };
 		AC17059D1FC766B30059A54E /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		AC17059F1FC769560059A54E /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
-		AC1705A11FC7D8DF0059A54E /* AlbumParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumParse.swift; sourceTree = "<group>"; };
 		AC1705A31FC7D9E10059A54E /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
-		AC1705A51FC7E4FD0059A54E /* AlbumTracklistParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTracklistParse.swift; sourceTree = "<group>"; };
 		AC1705A71FC7E6640059A54E /* Tracklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracklist.swift; sourceTree = "<group>"; };
 		AC1D652A1FC7017000EF9E15 /* iTunesAlbumInformation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesAlbumInformation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1D652D1FC7017000EF9E15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,8 +40,8 @@
 		AC1D65391FC7017000EF9E15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC1D653F1FC7025E00EF9E15 /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
 		AC1D65411FC705EC00EF9E15 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
-		AC1D65451FC70AB600EF9E15 /* ArtistParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistParse.swift; sourceTree = "<group>"; };
 		AC1D65471FC70DB000EF9E15 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		AC7A271F1FCB177C0054BB29 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		C1197C671FFBFAAF4928CC0B /* Pods_iTunesAlbumInformation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesAlbumInformation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E773EC67703C4B4BB26B5FE0 /* Pods-iTunesAlbumInformation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesAlbumInformation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iTunesAlbumInformation/Pods-iTunesAlbumInformation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,16 +77,6 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
-		AC1705AB1FC841DE0059A54E /* RequestManagers */ = {
-			isa = PBXGroup;
-			children = (
-				AC1D65451FC70AB600EF9E15 /* ArtistParse.swift */,
-				AC1705A11FC7D8DF0059A54E /* AlbumParse.swift */,
-				AC1705A51FC7E4FD0059A54E /* AlbumTracklistParse.swift */,
-			);
-			path = RequestManagers;
-			sourceTree = "<group>";
-		};
 		AC1D65211FC7017000EF9E15 = {
 			isa = PBXGroup;
 			children = (
@@ -112,8 +98,8 @@
 		AC1D652C1FC7017000EF9E15 /* iTunesAlbumInformation */ = {
 			isa = PBXGroup;
 			children = (
-				AC1705AB1FC841DE0059A54E /* RequestManagers */,
 				AC1705A91FC841BF0059A54E /* Objects */,
+				AC7A271F1FCB177C0054BB29 /* RequestManager.swift */,
 				AC1D652D1FC7017000EF9E15 /* AppDelegate.swift */,
 				AC1D652F1FC7017000EF9E15 /* ViewController.swift */,
 				AC1D653F1FC7025E00EF9E15 /* ArtistTableViewCell.swift */,
@@ -266,9 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC1705A61FC7E4FD0059A54E /* AlbumTracklistParse.swift in Sources */,
 				AC1D65421FC705EC00EF9E15 /* AlbumViewController.swift in Sources */,
-				AC1705A21FC7D8DF0059A54E /* AlbumParse.swift in Sources */,
 				AC1D65301FC7017000EF9E15 /* ViewController.swift in Sources */,
 				AC1D65481FC70DB000EF9E15 /* AlbumCollectionViewCell.swift in Sources */,
 				AC1705A01FC769560059A54E /* Artist.swift in Sources */,
@@ -277,7 +261,7 @@
 				AC1D65401FC7025E00EF9E15 /* ArtistTableViewCell.swift in Sources */,
 				AC1705A81FC7E6640059A54E /* Tracklist.swift in Sources */,
 				AC1D652E1FC7017000EF9E15 /* AppDelegate.swift in Sources */,
-				AC1D65461FC70AB600EF9E15 /* ArtistParse.swift in Sources */,
+				AC7A27201FCB177C0054BB29 /* RequestManager.swift in Sources */,
 				AC1705A41FC7D9E10059A54E /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

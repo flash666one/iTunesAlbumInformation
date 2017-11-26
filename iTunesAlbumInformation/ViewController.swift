@@ -22,9 +22,6 @@ class ViewController: UIViewController {
         ArtistTable.dataSource = self
         ArtistTable.delegate = self
         searchBar.delegate = self
-        ArtistParse.main.getArtist(){_ in
-            
-        }
         
     }
 
@@ -38,8 +35,7 @@ class ViewController: UIViewController {
 extension ViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        ArtistParse.main.asd = searchText
-        ArtistParse.main.getArtist { (artists) in
+        RequestManager.main.getArtist(by: searchText) { (artists) in
             self.artists = artists
             self.ArtistTable.reloadData()
         }

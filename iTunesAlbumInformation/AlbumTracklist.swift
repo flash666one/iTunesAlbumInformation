@@ -13,7 +13,7 @@ class AlbumTracklist: UIViewController {
     @IBOutlet weak var albumTracklist: UITableView!
     
     var object: Album?
-    var tracklist: [Tracklist] = []
+    var tracks: [Tracklist] = []
     
     @IBOutlet weak var albumArt: UIImageView!
     
@@ -26,55 +26,57 @@ class AlbumTracklist: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        TracklistParse.main.asd = (object?.collectionId)!
-        TracklistParse.main.getTracklist { (tracks) in
-            self.tracklist = tracks
+        //вызываю функцию парсера
+        RequestManager.main.getTracklist(by: object!.collectionId) { (tracks) in
+            self.tracks = tracks
             self.albumTracklist.reloadData()
         }
+        //назначаю dataSource на таблицу с треками
         albumTracklist.dataSource = self
+        // извлекаю обложку альбома по url передаю на imageView
         albumArt.layer.masksToBounds = true
-        if let url = URL(string: (object?.artwork)!) {
-            let dataTask = URLSession.shared.dataTask(with: url, completionHandler: myHandler)
+        if let url = URL(string: object!.artwork) {
+            let dataTask = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+                if let imageData = data {
+                    if let image = UIImage(data: imageData) {
+                        DispatchQueue.main.async {
+                            self.albumArt.image = image
+                            
+                        }
+                    }
+                }
+            })
             dataTask.resume()
         }
+        //парсинг названия альбома и имени артиста
         albumName.text = object?.album
         artistName.text = object?.artistName
         
+        //для парсинга даты нужна конвертация конвертирую из того что приходит в json в string
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        let date = dateFormatter.date(from: (object?.year)!)!
+        let date = dateFormatter.date(from: object!.year)!
         dateFormatter.dateFormat = "yyyy"
         let dateString = dateFormatter.string(from: date)
+        //передаю на label
+        yearGenreLabel.text = object!.genre + "・" + dateString
         
-        yearGenreLabel.text = (object?.genre)! + " ・ " + dateString
-        
-    }
-    
-    func myHandler(data: Data?, response: URLResponse?, error: Error?) {
-        if let imageData = data {
-            if let image = UIImage(data: imageData) {
-                DispatchQueue.main.async {
-                    self.albumArt.image = image
-                    
-                }
-            }
-        }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 }
-
+//настройка таблицы с треками
 extension AlbumTracklist: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = albumTracklist.dequeueReusableCell(withIdentifier: "song") as! SongTableViewCell
-            cell.songInfo.text = tracklist[indexPath.row].trackName
-            cell.songNumber.text = String(tracklist[indexPath.row].trackNumber)
+            cell.songInfo.text = tracks[indexPath.row].trackName
+            cell.songNumber.text = String(tracks[indexPath.row].trackNumber)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tracklist.count
+        return tracks.count
     }
 }

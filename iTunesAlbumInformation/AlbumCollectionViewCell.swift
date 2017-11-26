@@ -9,6 +9,7 @@
 import UIKit
 
 class AlbumCollectionViewCell: UICollectionViewCell {
+    //клас ячейки с альбомами
     
     @IBOutlet weak var albumArtImage: UIImageView!
     
