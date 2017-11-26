@@ -14,15 +14,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var ArtistTable: UITableView!
-
+    
+    // пустой масим с объектами типа Artist
     var artists: [Artist] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //настройка элемента navigationBar
+        navigationItem.title = "Artist"
+        //назначение параметров delegate и dataSource этого на класс данного VC
         ArtistTable.dataSource = self
         ArtistTable.delegate = self
         searchBar.delegate = self
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,7 +36,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UISearchBarDelegate {
-    
+    //настройка функции парсера при наборе текста
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         RequestManager.main.getArtist(by: searchText) { (artists) in
             self.artists = artists
@@ -44,8 +47,7 @@ extension ViewController: UISearchBarDelegate {
 
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    
+    //настройка таблицы, ячейка возвращает исполнителей, согласно вводимым значениям в поле searchBar
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "artist") as! ArtistResultTableViewCell
             cell.ArtistResult.text = self.artists[indexPath.row].artist

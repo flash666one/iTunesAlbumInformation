@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 class AlbumViewController: UIViewController {
-    
+    //объект, принимаемый из предудущего контролера и пустой
     var object: Artist?
     var albums: [Album] = []
     
@@ -18,6 +18,7 @@ class AlbumViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "\(object!.artist)"
         albumCollectionView.delegate = self
         albumCollectionView.dataSource = self
         //вызываю функцию парсинга альбомов
@@ -43,6 +44,7 @@ extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSou
                 if let imageData = data {
                     if let image = UIImage(data: imageData) {
                         DispatchQueue.main.async {
+                            cell.albumArtImage.layer.masksToBounds = true
                             cell.albumArtImage.image = image
                         }
                     }
