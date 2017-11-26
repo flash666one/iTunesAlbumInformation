@@ -1,0 +1,6 @@
+framework module Pods_iTunesAlbumInformation {
+  umbrella header "Pods-iTunesAlbumInformation-umbrella.h"
+
+  export *
+  module * { export * }
+}
