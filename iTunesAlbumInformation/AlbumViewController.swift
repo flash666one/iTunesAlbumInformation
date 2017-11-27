@@ -23,9 +23,9 @@ class AlbumViewController: UIViewController {
         albumCollectionView.dataSource = self
         //вызываю функцию парсинга альбомов
         RequestManager.main.getAlbum(by: object!.artistId) { (albums) in
-            self.albums.sort(by: { $0.album > $1.album })
             self.albums = albums
             self.albumCollectionView.reloadData()
+            self.albums.sort(by: { $0.album < $1.album })
         }
     }
     
