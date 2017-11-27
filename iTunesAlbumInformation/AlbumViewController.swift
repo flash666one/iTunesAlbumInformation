@@ -48,7 +48,7 @@ extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSou
                             cell.albumArtImage.layer.masksToBounds = true
                             cell.albumArtImage.layer.cornerRadius = 5
                             cell.albumArtImage.layer.borderColor = UIColor.black.cgColor
-                            cell.albumArtImage.layer.borderWidth = 3/2
+                            cell.albumArtImage.layer.borderWidth = 1
                             cell.albumArtImage.image = image
                         }
                     }
