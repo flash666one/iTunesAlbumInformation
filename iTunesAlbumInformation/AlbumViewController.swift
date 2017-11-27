@@ -13,6 +13,9 @@ class AlbumViewController: UIViewController {
     //объект, принимаемый из предудущего контролера и пустой
     var object: Artist?
     var albums: [Album] = []
+    //переменные для размеров ячеек с альбомами
+    var screenSize: CGRect!
+    var screenWidth: CGFloat!
     
     @IBOutlet weak var albumCollectionView: UICollectionView!
     
@@ -21,6 +24,16 @@ class AlbumViewController: UIViewController {
         navigationItem.title = "\(object!.artist)"
         albumCollectionView.delegate = self
         albumCollectionView.dataSource = self
+        // для оптимизации прилодения на девайсах решил сделать размеры и расстояния по соотношениям сторон относительно высоты экрана
+        screenSize = UIScreen.main.bounds
+        screenWidth = screenSize.width
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        // расстояния по краям
+        layout.sectionInset = UIEdgeInsets(top: screenWidth / 15, left: screenWidth / 15, bottom: screenWidth / 15, right: screenWidth / 15)
+        // расстояния между ячейками
+        layout.itemSize = CGSize(width: screenWidth / 4 , height: screenWidth / 4)
+        albumCollectionView.frame = self.view.frame
+        albumCollectionView.collectionViewLayout = layout
         //вызываю функцию парсинга альбомов
         RequestManager.main.getAlbum(by: object!.artistId) { (albums) in
             self.albums = albums
@@ -35,6 +48,8 @@ class AlbumViewController: UIViewController {
 }
 
 extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = albumCollectionView.dequeueReusableCell(withReuseIdentifier: "album", for: indexPath) as! AlbumCollectionViewCell
@@ -56,6 +71,9 @@ extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSou
             })
             dataTask.resume()
         }
+        // размер ячейки
+        cell.frame.size.width = screenWidth / 4
+        cell.frame.size.height = screenWidth / 4
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -67,6 +85,7 @@ extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSou
             navigationController?.pushViewController(vc, animated: true)
         }
     }
+
 }
 
 
