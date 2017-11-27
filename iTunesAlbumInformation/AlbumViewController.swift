@@ -45,6 +45,9 @@ extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSou
                     if let image = UIImage(data: imageData) {
                         DispatchQueue.main.async {
                             cell.albumArtImage.layer.masksToBounds = true
+                            cell.albumArtImage.layer.cornerRadius = 5
+                            cell.albumArtImage.layer.borderColor = UIColor.black.cgColor
+                            cell.albumArtImage.layer.borderWidth = 3/2
                             cell.albumArtImage.image = image
                         }
                     }

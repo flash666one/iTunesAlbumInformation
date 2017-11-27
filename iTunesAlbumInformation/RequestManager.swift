@@ -123,7 +123,7 @@ class RequestManager {
     func parseTracklist (unparsed tracks: [Any]) -> [Tracklist] {
         var reloadTracklist: [Tracklist] = []
         for track in tracks {
-            var newTrack = Tracklist(trackNumber: 0, artistName: "", trackName: "")
+            var newTrack = Tracklist(trackNumber: 0, artistName: "", trackName: "", trackTimeMillis: 0)
             if let dict = track as? [String: Any] {
                 
                 if let trackNumber = dict["trackNumber"] as? Int {
@@ -134,6 +134,9 @@ class RequestManager {
                 }
                 if let trackName = dict["trackName"] as? String {
                     newTrack.trackName = trackName
+                }
+                if let trackTimeMillis = dict["trackTimeMillis"] as? Int {
+                    newTrack.trackTimeMillis = trackTimeMillis
                 }
             }
             if newTrack.trackNumber != 0 {

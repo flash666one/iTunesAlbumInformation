@@ -10,18 +10,13 @@ import UIKit
 
 class SongTableViewCell: UITableViewCell {
     
-    //клас ячейки с песней
+    //класс ячейки с песней
     
     @IBOutlet weak var songNumber: UILabel!
     
     @IBOutlet weak var songInfo: UILabel!
     
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
+    @IBOutlet weak var trackTime: UILabel!
+    
+    
 }

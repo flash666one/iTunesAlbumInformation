@@ -11,4 +11,5 @@ struct Tracklist {
     var trackNumber: Int
     var artistName: String
     var trackName: String
+    var trackTimeMillis: Int
 }

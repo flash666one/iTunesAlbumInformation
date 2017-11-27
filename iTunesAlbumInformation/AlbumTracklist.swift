@@ -41,7 +41,9 @@ class AlbumTracklist: UIViewController {
                     if let image = UIImage(data: imageData) {
                         DispatchQueue.main.async {
                             self.albumArt.image = image
-                            
+                            self.albumArt.layer.cornerRadius = 5
+                            self.albumArt.layer.borderWidth = 3/2
+                            self.albumArt.layer.borderColor = UIColor.black.cgColor
                         }
                     }
                 }
@@ -73,6 +75,15 @@ extension AlbumTracklist: UITableViewDataSource {
         let cell = albumTracklist.dequeueReusableCell(withIdentifier: "song") as! SongTableViewCell
             cell.songInfo.text = tracks[indexPath.row].trackName
             cell.songNumber.text = String(tracks[indexPath.row].trackNumber)
+        //функция конвертации миллисекунд в корректное время трека формата MM:SS
+            let totalSeconds = tracks[indexPath.row].trackTimeMillis / 1000
+            let minutes = totalSeconds / 60
+            let seconds = totalSeconds - minutes*60
+            if seconds < 10 {
+                cell.trackTime.text = String(minutes)+":0"+String(seconds)
+            } else {
+                cell.trackTime.text = String(minutes)+":"+String(seconds)
+            }
         return cell
     }
     

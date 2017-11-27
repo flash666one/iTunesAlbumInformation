@@ -92,34 +92,32 @@
                                 <rect key="frame" x="0.0" y="56" width="320" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dVA-rQ-edN">
-                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="itemSize" width="120" height="120"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="album" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="album" id="i5g-rG-7Lr" customClass="AlbumCollectionViewCell" customModule="iTunesAlbumInformation" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="100" height="100"/>
+                                        <rect key="frame" x="10" y="10" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cOx-Vf-fJa">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="3bq-DN-wEX"/>
-                                                        <constraint firstAttribute="height" constant="100" id="IOU-rg-59O"/>
                                                         <constraint firstAttribute="width" secondItem="cOx-Vf-fJa" secondAttribute="height" multiplier="1:1" id="NHt-Qm-t5O"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="cOx-Vf-fJa" firstAttribute="top" secondItem="i5g-rG-7Lr" secondAttribute="top" id="2uq-q3-Bqb"/>
-                                            <constraint firstItem="cOx-Vf-fJa" firstAttribute="leading" secondItem="i5g-rG-7Lr" secondAttribute="leading" id="6EE-hd-8xC"/>
-                                            <constraint firstAttribute="trailing" secondItem="cOx-Vf-fJa" secondAttribute="trailing" id="E6X-ZK-Ofy"/>
-                                            <constraint firstAttribute="bottom" secondItem="cOx-Vf-fJa" secondAttribute="bottom" id="QMf-JA-IxF"/>
+                                            <constraint firstItem="cOx-Vf-fJa" firstAttribute="top" secondItem="i5g-rG-7Lr" secondAttribute="top" id="6IM-7F-cmB"/>
+                                            <constraint firstAttribute="trailing" secondItem="cOx-Vf-fJa" secondAttribute="trailing" id="6O1-rV-hsr"/>
+                                            <constraint firstItem="cOx-Vf-fJa" firstAttribute="leading" secondItem="i5g-rG-7Lr" secondAttribute="leading" id="Ius-tC-hRc"/>
+                                            <constraint firstAttribute="bottom" secondItem="cOx-Vf-fJa" secondAttribute="bottom" id="aMN-0y-VIa"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="albumArtImage" destination="cOx-Vf-fJa" id="ftf-C2-JsG"/>
@@ -146,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJ9-IU-8Wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1838" y="132"/>
+            <point key="canvasLocation" x="1762.5" y="132.04225352112675"/>
         </scene>
         <!--Album Tracklist-->
         <scene sceneID="A9L-f4-Gq3">
@@ -167,25 +165,38 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NN7-zw-Yze">
-                                                    <rect key="frame" x="11" y="11" width="34" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NN7-zw-Yze">
+                                                    <rect key="frame" x="15" y="11" width="31" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SongInfo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZF-BW-frD">
-                                                    <rect key="frame" x="47" y="11" width="261" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SongInfo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZF-BW-frD">
+                                                    <rect key="frame" x="54" y="11" width="68.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6f-uH-q1k">
+                                                    <rect key="frame" x="266" y="11" width="46" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="a6f-uH-q1k" secondAttribute="trailing" constant="8" id="6zu-1v-OTT"/>
+                                                <constraint firstItem="XZF-BW-frD" firstAttribute="leading" secondItem="NN7-zw-Yze" secondAttribute="trailing" constant="8" id="M7O-mV-f3W"/>
+                                                <constraint firstItem="NN7-zw-Yze" firstAttribute="centerY" secondItem="05B-SM-tA7" secondAttribute="centerY" id="flU-SB-M5f"/>
+                                                <constraint firstItem="NN7-zw-Yze" firstAttribute="leading" secondItem="05B-SM-tA7" secondAttribute="leadingMargin" id="nDl-s5-oh9"/>
+                                                <constraint firstItem="a6f-uH-q1k" firstAttribute="centerY" secondItem="05B-SM-tA7" secondAttribute="centerY" id="uff-wX-16B"/>
+                                                <constraint firstItem="XZF-BW-frD" firstAttribute="centerY" secondItem="05B-SM-tA7" secondAttribute="centerY" id="zBb-Dc-HTI"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="songInfo" destination="XZF-BW-frD" id="hie-hA-TMi"/>
                                             <outlet property="songNumber" destination="NN7-zw-Yze" id="Ien-qJ-Xdg"/>
+                                            <outlet property="trackTime" destination="a6f-uH-q1k" id="Hpv-pw-KA2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -258,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwc-3f-cq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2746.875" y="130.98591549295776"/>
+            <point key="canvasLocation" x="2580" y="130.98591549295776"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cuD-zB-h1O">
