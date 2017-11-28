@@ -43,6 +43,10 @@ extension ViewController: UISearchBarDelegate {
             self.ArtistTable.reloadData()
         }
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+    }
 }
 
 
