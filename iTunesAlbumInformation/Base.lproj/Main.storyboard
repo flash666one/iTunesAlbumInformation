@@ -166,13 +166,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NN7-zw-Yze">
-                                                    <rect key="frame" x="15" y="11" width="31" height="21"/>
+                                                    <rect key="frame" x="23" y="11" width="31" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SongInfo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="XZF-BW-frD">
-                                                    <rect key="frame" x="54" y="11" width="68.5" height="21"/>
+                                                    <rect key="frame" x="62" y="11" width="68.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -185,12 +185,12 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="a6f-uH-q1k" secondAttribute="trailing" constant="8" id="6zu-1v-OTT"/>
-                                                <constraint firstItem="XZF-BW-frD" firstAttribute="leading" secondItem="NN7-zw-Yze" secondAttribute="trailing" constant="8" id="M7O-mV-f3W"/>
-                                                <constraint firstItem="NN7-zw-Yze" firstAttribute="centerY" secondItem="05B-SM-tA7" secondAttribute="centerY" id="flU-SB-M5f"/>
-                                                <constraint firstItem="NN7-zw-Yze" firstAttribute="leading" secondItem="05B-SM-tA7" secondAttribute="leadingMargin" id="nDl-s5-oh9"/>
-                                                <constraint firstItem="a6f-uH-q1k" firstAttribute="centerY" secondItem="05B-SM-tA7" secondAttribute="centerY" id="uff-wX-16B"/>
-                                                <constraint firstItem="XZF-BW-frD" firstAttribute="centerY" secondItem="05B-SM-tA7" secondAttribute="centerY" id="zBb-Dc-HTI"/>
+                                                <constraint firstItem="NN7-zw-Yze" firstAttribute="centerY" secondItem="05B-SM-tA7" secondAttribute="centerY" id="AaQ-NZ-ztC"/>
+                                                <constraint firstItem="XZF-BW-frD" firstAttribute="centerY" secondItem="05B-SM-tA7" secondAttribute="centerY" id="pCb-Wk-TtV"/>
+                                                <constraint firstItem="XZF-BW-frD" firstAttribute="leading" secondItem="NN7-zw-Yze" secondAttribute="trailing" constant="8" id="r0N-7e-YYK"/>
+                                                <constraint firstAttribute="trailing" secondItem="a6f-uH-q1k" secondAttribute="trailing" constant="8" id="rcT-t8-864"/>
+                                                <constraint firstItem="NN7-zw-Yze" firstAttribute="leading" secondItem="05B-SM-tA7" secondAttribute="leadingMargin" constant="8" id="vJT-6D-osE"/>
+                                                <constraint firstItem="a6f-uH-q1k" firstAttribute="centerY" secondItem="05B-SM-tA7" secondAttribute="centerY" id="z66-eW-FbY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

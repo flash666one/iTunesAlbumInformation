@@ -24,7 +24,7 @@ class AlbumViewController: UIViewController {
         navigationItem.title = "\(object!.artist)"
         albumCollectionView.delegate = self
         albumCollectionView.dataSource = self
-        // для оптимизации прилодения на девайсах решил сделать размеры и расстояния по соотношениям сторон относительно высоты экрана
+        // для оптимизации прилодения на девайсах решил сделать размеры и расстояния по соотношениям сторон относительно ширины экрана
         screenSize = UIScreen.main.bounds
         screenWidth = screenSize.width
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
